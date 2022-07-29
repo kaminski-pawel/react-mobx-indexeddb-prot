@@ -3,17 +3,17 @@ import { render } from "react-dom";
 import DevTools from "mobx-react-devtools";
 
 import TodoList from "./components/TodoList";
-import PersistentObservableTodoStore from './store/persistentObservableStore';
+import PersistentObservableTodoStore from "./store/persistentObservableStore";
 import dexieStore from "./store/dexieStore";
 
-const pstore = new PersistentObservableTodoStore(new dexieStore())
+const pstore = new PersistentObservableTodoStore(new dexieStore());
 
 //const store = new IDBObservableTodoStore(new fooStore());
 //store.fetchTodos()
 
 const showStore = () => {
-  console.log(pstore.todos)
-}
+  console.log(pstore.todos);
+};
 
 render(
   <div>

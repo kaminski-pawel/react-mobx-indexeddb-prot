@@ -1,24 +1,24 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 class NewTodo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (event) => {
-    this.setState({value: event.target.value});
-  }
+    this.setState({ value: event.target.value });
+  };
 
   handleSubmit = (event) => {
-    this.setState({value: ""})
-    this.props.handleFormSubmit(this.state.value)
-    event.preventDefault()
-  }
+    this.setState({ value: "" });
+    this.props.handleFormSubmit(this.state.value);
+    event.preventDefault();
+  };
 
   render() {
     return (
@@ -31,12 +31,12 @@ class NewTodo extends React.Component {
         />
         <button type="submit">Add</button>
       </form>
-    )
+    );
   }
 }
 
 NewTodo.propTypes = {
-  handleFormSubmit: PropTypes.func.isRequired
-}
+  handleFormSubmit: PropTypes.func.isRequired,
+};
 
-export default NewTodo
+export default NewTodo;

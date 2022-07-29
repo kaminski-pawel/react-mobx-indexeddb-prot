@@ -6,6 +6,6 @@ export default class TodoModel {
 
   constructor(title) {
     this.title = title;
-    this.finished = false
+    this.finished = false;
   }
 }
